@@ -1,3 +1,77 @@
-h1 {
-    color: #0000ff;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+body, html {
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0px 20px 0px 20px;
+    height: 100%;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.title {
+    color: #111111;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.text {
+    color: #4E5968;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.card {
+    background-color: #fff;
+    display: flex;
+    max-width: 840px;
+    border-radius: 24px;
+    box-shadow: #111111;
+    padding: 64px 40px 64px 24px;
+    gap: 80px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 810px) {
+    .card {
+        flex-direction: column;
+    }
+    .title {
+        font-size: 32px;
+    }
+}
+
+#lottie-container > svg {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    width: 300px !important;
+    height: 300px !important;
+    display: block;
+    object-fit: contain;
 }

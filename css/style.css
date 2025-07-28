@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a img {
+  display: block;
+}
+
 html {
   word-break: keep-all;
   word-wrap: break-word;
@@ -54,7 +58,42 @@ body {
     padding: 64px 40px 64px 24px;
     gap: 80px;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fade 1s ease-out forwards;
 }
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    border: 0px solid #eeeeee;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.information {
+    display: flex;
+    gap:12px;
+    align-items: center;
+    margin-top: 16px;
+}
+
 
 @media (max-width: 810px) {
     .card {
@@ -62,6 +101,9 @@ body {
     }
     .title {
         font-size: 32px;
+    }
+    .information {
+        justify-content: center;
     }
 }
 

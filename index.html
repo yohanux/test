@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>요한 연습</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 </head>
 <body>
+    <div id="lottie-container" style="width:300px; height:300px;"></div>
+    <script>
+    lottie.loadAnimation({
+        container: document.getElementById('lottie-container'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'image/profile.json'});
+    </script>
+
     <h1>안녕하세요<br> 디자이너 박요한입니다</h1>
 </body>
 </html>

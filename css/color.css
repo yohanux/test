@@ -2,6 +2,7 @@
     --white: #ffffff;
     --black: #000000;
     --greyscale-100: #f5f5f5;
+    --greyscale-150: #ebebeb;
     --greyscale-200: #d8d8d8;
     --greyscale-300: #bbbbbb;
     --greyscale-400: #9e9e9e;
@@ -10,4 +11,6 @@
     --greyscale-700: #484848;
     --greyscale-800: #2b2b2b;
     --greyscale-900: #111111;
+
+    --blue-700: #0080FF;
 }

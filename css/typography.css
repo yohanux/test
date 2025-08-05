@@ -1,4 +1,6 @@
 :root {
+  --size-40: 40px;
+  --size-32: 32px;
   --size-20: 20px;
   --size-16: 16px;
   --size-14: 14px;
@@ -6,4 +8,5 @@
   --weight-semibold: 600;
   --weight-medium: 500;
   --weight-regular: 400;
+  --weight-light: 300;
 }

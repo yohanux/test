@@ -20,27 +20,27 @@ html {
 
 .text-hero-s {
     font-size: var(--size-40);
-    font-weight: var(--weight-medium);
+    font-weight: var(--weight-semibold);
     color: var(--greyscale-900);
     line-height: 1.4;
 }
 
 .text-hero-xs {
     font-size: var(--size-32);
-    font-weight: var(--weight-medium);
+    font-weight: var(--weight-regular);
     color: var(--greyscale-900);
     line-height: 1.3;
 }
 
 .text-title-s {
     font-size: var(--size-20);
-    font-weight: var(--weight-medium);
+    font-weight: 500;
     color: var(--greyscale-900);
 }
 
 .text-body-l {
     font-size: var(--size-17);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-regular);
     color: var(--greyscale-700);
     line-height: 1.7;
 }
@@ -121,6 +121,7 @@ a img {
     color: var(--greyscale-700);
     padding: 8px 16px 8px 16px;
     text-decoration: none;
+    transition: opacity 0.2s ease-out;
 }
 
 .logo__link{
@@ -186,19 +187,9 @@ footer{
     width: 100%;
     aspect-ratio: 16 / 9;
     display: block;
-    background-color: #fafafa;
     border-radius: 16px;
     overflow: hidden;
-}
-
-.contents__item__image::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  box-shadow: inset 0 0 0 1.5px #e6e6e680;
-  border-radius: 16px;
-  pointer-events: none;
-  z-index: 1;
+    transition: transform 0.4s ease-out;
 }
 
 .contents__item__image img {
@@ -206,7 +197,7 @@ footer{
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.2s ease-out;
+    transition: transform 0.4s ease-out;
 }
 
 .contents__item__text{
@@ -245,14 +236,89 @@ footer{
     color:var(--blue-700);
 }
 
+.contents__item:hover .contents__item__image {
+    transform: scale(0.95);
+}
+.navbar__item:hover {
+    opacity: 0.3;
+}
+
 .contents__item:hover .contents__item__image img {
-    transform: scale(1.1); /* 확대 */
+    transform: scale(1.15);
 }
 
 
 
+    /* -------------------------------------------------- Post ------------------------------------------------ */
 
+.post__body{
+    max-width: 840px;
+    width: 100%;
+    padding-bottom: 80px;
+}
 
+.post__contents{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    opacity: 0;
+    animation: fade 0.75s ease-out forwards;
+}
+
+.post__share{
+    
+}
+
+.post__next{
+    
+}
+
+.post__contents__banner {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center;     /* 세로 중앙 정렬 */
+    overflow: hidden;
+    transform: translateY(64px);
+    opacity: 0;
+    animation: fade 0.75s ease-out forwards;
+}
+
+.post__contents__banner img {
+  width: auto;
+  height: 100%;
+  object-fit: contain; /* 비율 유지하면서 영역 안에 맞춤 */
+  display: block;
+}
+
+.post__contents__text{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    transform: translateY(64px);
+    opacity: 0;
+    animation: fade 0.75s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.post__contents__text__title{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.post__contents__text__body{
+    
+}
+
+.post__contents__text__title__title{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+    /* -------------------------------------------------- Post ------------------------------------------------ */
 
 
 
@@ -298,6 +364,17 @@ footer{
     gap: 80px;
 }
 
+#lottie-container > svg {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    width: 300px !important;
+    height: 300px !important;
+    display: block;
+    object-fit: contain;
+}
+
 @keyframes fade {
   to {
     opacity: 1;
@@ -326,6 +403,34 @@ footer{
     font-weight: var(--weight-medium);
     color: var(--greyscale-900);
     line-height: 1.3;
+    }
+    .post__contents {
+        gap: 40px;
+    }
+    .post__contents__banner{
+        height: 240px;
+    }
+    .post__contents__text {
+        gap: 80px;
+        padding: 0px 20px 0px 20px;
+    }
+    .post__contents__banner img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* 비율 유지하면서 영역 안에 맞춤 */
+        display: block;
+    }
+    .contents__profile {
+        height: auto;
+    }
+    .profile {
+        gap: 40px;
+        padding-top: 104px;
+        padding-bottom: 56px;
+    }
+    #lottie-container > svg {
+        width: 240px !important;
+        height: 240px !important;
     }
 }
 
@@ -370,13 +475,3 @@ footer{
     }
 }
 
-#lottie-container > svg {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin: 0 auto;
-    width: 300px !important;
-    height: 300px !important;
-    display: block;
-    object-fit: contain;
-}
